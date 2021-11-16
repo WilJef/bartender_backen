@@ -51,13 +51,13 @@ public class BartenderService {
 
 	private int[] iniciarProceso(Arrays arraysBartender, int numeroIteraciones) {
 		
-		System.out.println("iniciarProceso aray " + arraysBartender.getInputArray());
-		System.out.println("iniciarProceso numeroIteraciones " + numeroIteraciones);
+		//System.out.println("iniciarProceso aray " + arraysBartender.getInputArray());
+		//System.out.println("iniciarProceso numeroIteraciones " + numeroIteraciones);
 		
 		int[] arrayA = new int[1];
 		int[] arrayB = new int[1];
 		int[] arrayAindice = new int[1];
-		int[] arrayRespuesta = new int[1];
+		int[] arrayRespuesta = null;
 		int[] arrayPrimos = retornarListaPrimos();
 		
 		int primoActual = 0;
@@ -73,9 +73,9 @@ public class BartenderService {
 
 				for (int iteracion = 0; iteracion < numeroIteraciones; iteracion++) {
 					primoActual = arrayPrimos[iteracion];
-					System.out.println("primo " + primoActual);
+					//System.out.println("primo " + primoActual);
 
-					System.out.println("iteracion " + iteracion);
+					//System.out.println("iteracion " + iteracion);
 					arrayB = null;
 					arrayAindice = null;
 
@@ -83,9 +83,9 @@ public class BartenderService {
 						break;
 
 					for (int j = arrayA.length - 1; j >= 0; j--) {
-						System.out.println("arrayA[j] mod primo " + arrayA[j] + " " + primoActual);
+						//System.out.println("arrayA[j] mod primo " + arrayA[j] + " " + primoActual);
 						if (arrayA[j] % primoActual == 0) {
-							System.out.println("adiciona a arrayB arrayA[j] " + arrayA[j]);
+							//System.out.println("adiciona a arrayB arrayA[j] " + arrayA[j]);
 							if (arrayB == null || arrayB.length == 0) {
 								arrayB = new int[] { arrayA[j] };
 							} else {
@@ -94,7 +94,7 @@ public class BartenderService {
 							}
 
 						} else {
-							System.out.println("adiciona a arrayAindice arrayA[j] " + arrayA[j]);
+							//System.out.println("adiciona a arrayAindice arrayA[j] " + arrayA[j]);
 							if (arrayAindice == null || arrayAindice.length == 0) {
 								arrayAindice = new int[] { arrayA[j] };
 
@@ -107,7 +107,7 @@ public class BartenderService {
 						}
 
 					}
-					if (arrayB != null) {
+					/*if (arrayB != null) {
 					for (int i = 0; i < arrayB.length; i++) {
 						System.out.println("arrayB = " + arrayB[i]);
 					}
@@ -116,7 +116,7 @@ public class BartenderService {
 						for (int i = 0; i < arrayAindice.length; i++) {
 							System.out.println("arrayAindice = " + arrayAindice[i]);
 						}
-					}
+					}*/
 
 					arrayA = arrayAindice;
 
@@ -129,9 +129,9 @@ public class BartenderService {
 									.toArray();
 						}
 					}
-					for (int i = 0; i < arrayRespuesta.length; i++) {
+					/*for (int i = 0; i < arrayRespuesta.length; i++) {
 						System.out.println("arrayRespuesta = " + arrayRespuesta[i]);
-					}
+					}*/
 
 				}
 				if (arrayRespuesta == null || arrayRespuesta.length == 0) {
