@@ -8,7 +8,7 @@
 		<version>2.2.2.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.tutorial</groupId>
+	<groupId>com.aldeamo</groupId>
 	<artifactId>bartender</artifactId>
 	<version>1.0.0</version>
 	<name>bartender</name>
